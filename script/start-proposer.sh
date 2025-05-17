@@ -2,6 +2,12 @@
 
 set -eou pipefail
 
+echo "TAIKO_L1_ADDRESS=${TAIKO_L1_ADDRESS}"
+echo "TAIKO_L2_ADDRESS=${TAIKO_L2_ADDRESS}"
+echo "L1_PROPOSER_PRIVATE_KEY=${L1_PROPOSER_PRIVATE_KEY}"
+echo "L2_SUGGESTED_FEE_RECIPIENT=${L2_SUGGESTED_FEE_RECIPIENT}"
+echo "L1_ENDPOINT_WS=${L1_ENDPOINT_WS}"
+
 if [ "$ENABLE_PROPOSER" = "true" ]; then
     ARGS="--l1.ws ${L1_ENDPOINT_WS}
         --l2.http http://l2-nethermind-execution-client:${L2_HTTP_PORT}
